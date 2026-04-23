@@ -144,6 +144,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-family: 'Anton', sans-serif;
   text-align: center;
+  text-justify: auto;
 }
 
 .hero-card p {
@@ -151,6 +152,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   margin-bottom: 1.2rem;
   font-family: 'Spectral', serif;
+  text-align: center;
+  text-justify: auto;
 }
 
 .hero-card .subtle-text {
@@ -191,8 +194,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
 }
 
 .card-pink .card-btn {
@@ -274,6 +278,12 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   color: #000;
   font-weight: 500;
+}
+
+.card-pink .card-btn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
 }
 
 .card-pink h2 {
@@ -368,9 +378,10 @@ h1, h2, h3, h4, h5, h6 {
 .about-text h3 {
   font-size: 0.9rem;
   letter-spacing: 2px;
-  color: #999;
+  color: #000;
   margin-bottom: 10px;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
 }
 
 .about-text h2 {
@@ -386,7 +397,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8;
   color: #333;
   margin-bottom: 25px;
-  font-family: 'Spectral', serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
 .btn-link {
@@ -410,9 +422,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-features {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  text-align: left;
+  text-align: center;
 }
 
 .feature {
@@ -426,6 +438,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature h4 {
@@ -440,7 +454,8 @@ h1, h2, h3, h4, h5, h6 {
 .feature p {
   font-size: 0.9rem;
   color: #666;
-  font-family: 'Spectral', serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   margin: 0;
 }
 
