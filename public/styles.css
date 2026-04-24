@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Grid Section */
 .hero-grid {
-  padding: 40px 0;
+  padding: 20px 0;
   background-color: #f5f5f5;
 }
 
@@ -975,6 +975,64 @@ footer {
   }
 }
 
+/* Tablet: Images on the side */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-column {
+    flex: none;
+  }
+
+  .card-teal,
+  .card-pink,
+  .card-lightblue,
+  .card-brown {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card-teal .card-text-container,
+  .card-pink .card-text-container,
+  .card-lightblue .card-text-container,
+  .card-brown .card-text-container {
+    max-width: 55%;
+    padding-right: 0;
+  }
+
+  .card-teal .card-image,
+  .card-pink .card-image,
+  .card-brown .card-image,
+  .card-lightblue .card-image {
+    position: relative !important;
+    width: 40%;
+    height: 100%;
+    flex-shrink: 0;
+    margin: 0;
+    border-radius: 20px;
+    order: 2;
+  }
+
+  .card-pink-bottom {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 0;
+    width: 100%;
+  }
+
+  .pet-img {
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     gap: 1rem;
@@ -990,7 +1048,29 @@ footer {
     flex: none;
   }
 
-  .card-teal,
+  .card-teal {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-teal .card-text-container {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .card-teal .card-image {
+    position: relative !important;
+    width: 60%;
+    height: auto !important;
+    flex-shrink: 0;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 20px;
+    align-self: flex-end;
+  }
+
   .card-pink,
   .card-lightblue,
   .card-brown {
@@ -999,7 +1079,6 @@ footer {
     flex-direction: column;
   }
 
-  .card-teal .card-text-container,
   .card-pink .card-text-container,
   .card-lightblue .card-text-container,
   .card-brown .card-text-container {
@@ -1007,7 +1086,6 @@ footer {
     padding-right: 0;
   }
 
-  .card-teal .card-image,
   .card-pink .card-image,
   .card-lightblue .card-image,
   .card-brown .card-image {
@@ -1033,7 +1111,7 @@ footer {
   }
 
   .pet-img {
-    height: 250px;
+    height: 300px;
     object-fit: contain;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
@@ -1115,38 +1193,29 @@ footer {
 
   .hero-card {
     border-radius: 20px;
-    padding: 20px;
+    padding: 25px;
     min-height: auto;
   }
 
   .hero-card h2 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
   }
 
   .hero-card p {
-    font-size: 0.85rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
   }
 
   .card-btn {
-    padding: 6px 12px;
-    font-size: 0.65rem;
+    padding: 8px 16px;
+    font-size: 0.75rem;
   }
 
-  .card-teal .card-image,
-  .card-brown .card-image {
-    width: 100px;
-    height: 120px;
-  }
-
-  .card-pink .card-image {
-    width: 100px;
-    height: 120px;
-  }
-
-  .card-lightblue .card-image {
-    width: 150px;
-    height: 105px;
+  .pet-img {
+    height: 300px;
   }
 
   .feature-card {
