@@ -418,6 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-link:hover {
   background-color: #000;
   color: #fff;
+  border-color: #000;
 }
 
 .about-features {
@@ -517,19 +518,23 @@ footer {
 .footer-cta {
   display: block;
   background-color: #fff;
-  color: #000;
+  color: #999;
   padding: 12px 24px;
   border-radius: 25px;
   text-align: center;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
+  border: 2px solid #fff;
   transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
 }
 
-.footer-cta:hover {
-  background-color: #f0f0f0;
+.footer-col .footer-cta:hover {
+  background-color: #fff;
+  color: #000 !important;
+  border-color: #fff;
 }
 
 .footer-bottom {
