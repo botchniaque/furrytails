@@ -10,78 +10,144 @@
   <nav class="navbar">
     <div class="container">
       <div class="logo">
-        <a href="/">Furry Tails Photography</a>
+        <a href="/">
+          <img src="/gallery/logo.jpeg" alt="Logo" width="40" height="40">
+          Pet Photography
+        </a>
       </div>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/how-it-works">How It Works</a></li>
-        <li><a href="/about">About Me</a></li>
-        <li><a href="/prices">Prices</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="/contact">Contact</a></li>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/gallery">GALLERY</a></li>
+        <li><a href="/how-it-works">SESSIONS</a></li>
+        <li><a href="/prices">PRICES</a></li>
+        <li><a href="/">VOUCHERS</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/contact">CONTACT</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="prices-hero">
       <div class="container">
-        <h1>Pricing</h1>
-        <p>Affordable pet photography packages for every budget</p>
+        <div class="prices-hero-box">
+          <div class="prices-hero-text">
+            <h2>Simple pricing. No surprises</h2>
+            <p>Choose the session that's right for you and your pet. Each one includes a relaxed professional experience and beautiful results you'll treasure forever.</p>
+          </div>
+          <div class="prices-hero-img">
+            <img src="/gallery/brown.jpeg" alt="Pet">
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="pricing-section">
+    <!-- Pricing Cards -->
+    <section class="prices-cards">
       <div class="container">
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <h3>Basic Package</h3>
-            <div class="price">$150</div>
-            <ul class="features">
-              <li>30-minute session</li>
-              <li>Location of your choice</li>
-              <li>20-30 edited digital photos</li>
-              <li>Digital files via email</li>
+        <h3 class="prices-cards-title">SESSION OPTIONS</h3>
+        <div class="prices-cards-grid">
+          <div class="price-card price-lightblue">
+            <h4>Essential session</h4>
+            <p>Perfect for a simple, beautiful portrait</p>
+            <div class="price">150 Euro</div>
+            <ul class="price-features">
+              <li>60-minute studio session</li>
+              <li>5 to 8 pets</li>
+              <li>2 backgrounds</li>
+              <li>3 edited images</li>
+              <li>3 fine art print (20 × 30 cm)</li>
             </ul>
-            <a href="/contact" class="cta-button">Book Now</a>
           </div>
 
-          <div class="pricing-card featured">
-            <h3>Premium Package</h3>
-            <div class="price">$300</div>
-            <ul class="features">
-              <li>60-minute session</li>
-              <li>Multiple locations</li>
-              <li>50-75 edited digital photos</li>
-              <li>Digital files via secure cloud link</li>
-              <li>One free reshoot if needed</li>
+          <div class="price-card price-blue">
+            <h4>Essential session</h4>
+            <p>More time, more variety</p>
+            <div class="price">245 Euro</div>
+            <ul class="price-features">
+              <li>90-minute studio session</li>
+              <li>Up to 2 pets</li>
+              <li>3 backgrounds</li>
+              <li>5 edited images</li>
+              <li>7 edited images (30 × 30 cm)</li>
             </ul>
-            <a href="/contact" class="cta-button">Book Now</a>
           </div>
 
-          <div class="pricing-card">
-            <h3>Group/Family Package</h3>
-            <div class="price">$400</div>
-            <ul class="features">
-              <li>90-minute session</li>
-              <li>Up to 3 pets (or pet + owner)</li>
-              <li>75-100 edited digital photos</li>
-              <li>Printed 8x10 photo</li>
-              <li>Digital files via secure cloud link</li>
+          <div class="price-card price-pink">
+            <h4>More Session</h4>
+            <p>Our studio essentials session</p>
+            <div class="price">335 Euro</div>
+            <ul class="price-features">
+              <li>120-minute studio session</li>
+              <li>Up to 2 pets</li>
+              <li>4 backgrounds</li>
+              <li>7 edited images</li>
+              <li>7 fine art print (20 × 30 cm)</li>
             </ul>
-            <a href="/contact" class="cta-button">Book Now</a>
+          </div>
+
+          <div class="price-card price-brown">
+            <h4>Artist Collection</h4>
+            <p>For those who want everything</p>
+            <div class="price">450 Euro</div>
+            <ul class="price-features">
+              <li>120-minute studio session</li>
+              <li>Up to 3 pets</li>
+              <li>5 backgrounds</li>
+              <li>All edited images</li>
+              <li>3 fine art print (15-25)</li>
+            </ul>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="pricing-notes">
-          <h3>Add-ons</h3>
-          <ul>
-            <li><strong>Printed Prints:</strong> 8x10 ($25), 11x14 ($40), Canvas 12x16 ($80)</li>
-            <li><strong>Album/Photobook:</strong> Starting at $50</li>
-            <li><strong>Rush Editing:</strong> One-week turnaround (+$50)</li>
-          </ul>
+    <!-- Add-ons Section -->
+    <section class="prices-addons">
+      <div class="container">
+        <div class="addons-grid">
+          <div class="addon-box price-lightblue">
+            <h3>ADD-ONS</h3>
+            <ul class="addon-list">
+              <li>
+                <span>Additional digital portrait</span>
+                <span>€25</span>
+              </li>
+              <li>
+                <span>Complete collection (all best images 15-25)</span>
+                <span>€240</span>
+              </li>
+              <li>
+                <span>Extra pet</span>
+                <span>€30</span>
+              </li>
+            </ul>
+            <p class="addon-note">Custom custom</p>
+          </div>
 
-          <p>All packages include professional editing and high-resolution digital files. Don't see what you're looking for? <a href="/contact">Contact me</a> to discuss custom packages.</p>
+          <div class="addon-box price-pink">
+            <h3>FINE ART PRINTS</h3>
+            <p class="addon-subtitle">Perfect quality to hang on the wall</p>
+            <ul class="addon-list">
+              <li>
+                <span>15 × 15 cm</span>
+                <span>€20</span>
+              </li>
+              <li>
+                <span>20 × 30 cm</span>
+                <span>€40</span>
+              </li>
+              <li>
+                <span>30 × 45 cm</span>
+                <span>€50</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -89,9 +155,57 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Furry Tails Photography. All rights reserved.</p>
-      <p><a href="/contact">Get in touch</a></p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="/gallery/logo.jpeg" alt="Logo" width="30" height="30">
+            <span>Pet Photography</span>
+          </div>
+          <p>Capturing the joy and personality of your beloved pets.</p>
+        </div>
+        <div class="footer-col">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/how-it-works">Sessions</a></li>
+            <li><a href="/prices">Prices</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LET'S CONNECT</h4>
+          <ul>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+            <li><a href="mailto:hello@furrytails.com">Email</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <a href="/contact" class="footer-cta">BOOK A SESSION</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Furry Tails Pet Photography. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+      });
+    });
+  </script>
 </body>
 </html>

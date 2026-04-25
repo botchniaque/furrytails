@@ -10,50 +10,105 @@
   <nav class="navbar">
     <div class="container">
       <div class="logo">
-        <a href="/">Furry Tails Photography</a>
+        <a href="/">
+          <img src="/gallery/logo.jpeg" alt="Logo" width="40" height="40">
+          Pet Photography
+        </a>
       </div>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/how-it-works">How It Works</a></li>
-        <li><a href="/about">About Me</a></li>
-        <li><a href="/prices">Prices</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="/contact">Contact</a></li>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/gallery">GALLERY</a></li>
+        <li><a href="/how-it-works">SESSIONS</a></li>
+        <li><a href="/prices">PRICES</a></li>
+        <li><a href="/">VOUCHERS</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/contact">CONTACT</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="how-it-works-hero">
       <div class="container">
-        <h1>How It Works</h1>
-        <p>A simple, stress-free process for getting beautiful photos of your pets</p>
+        <div class="hero-content">
+          <h2>Fun, simple, and a little bit chaotic (in a good way).</h2>
+          <p>We keep things relaxed, playful, and focused on capturing your pet's personality. You don't need a perfectly trained pet. Curiosity, energy, and a love for treats are more than enough.</p>
+          <a href="/contact" class="btn-primary">BOOK NOW →</a>
+        </div>
       </div>
     </section>
 
-    <section class="content">
+    <!-- Three Cards Section -->
+    <section class="how-it-works-cards">
       <div class="container">
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Contact & Consultation</h3>
-            <p>Reach out to discuss your vision and your pet's personality. We'll talk about locations, timing, and any special requests you have.</p>
+        <div class="cards-grid">
+          <!-- Before your session -->
+          <div class="how-card card-lightblue">
+            <h3>Before your session</h3>
+            <p>Getting ready is simple—and no, your pet doesn't need to be perfectly trained.</p>
+
+            <div class="card-highlight">
+              <p><strong>The main things? Think?</strong></p>
+              <p>Just give us a heads up about your pet beforehand—a little motivation goes a long way.</p>
+            </div>
+
+            <div class="card-section">
+              <p><strong>YOU'RE WELCOME TO BRING</strong></p>
+              <ul>
+                <li>Favorite toys</li>
+                <li>Favorite treats</li>
+                <li>Anything that helps show your pet's personality</li>
+              </ul>
+              <p>And don't worry if your pet is a bit nervous. That's completely normal—so cool with it.</p>
+            </div>
           </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Schedule Your Session</h3>
-            <p>Pick a date and time that works best for you and your furry friend. We recommend early morning or late afternoon for the best natural lighting.</p>
+
+          <!-- At the studio -->
+          <div class="how-card card-pink">
+            <h3>At the studio</h3>
+            <p>Sessions take place in my home studio. Not a big commercial space—just a comfortable, well-set-up environment.</p>
+
+            <div class="card-section">
+              <p><strong>WHAT TO EXPECT</strong></p>
+              <ul>
+                <li>Professional lighting, laid back vibe</li>
+                <li>Treats and playtime</li>
+                <li>A home-like environment</li>
+                <li>Time to let your pet warm up before we really get going</li>
+              </ul>
+            </div>
           </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>The Photoshoot</h3>
-            <p>Relax while we capture candid moments and posed shots of your pet. We work at your pet's pace to ensure they're comfortable and happy.</p>
+
+          <!-- During the session -->
+          <div class="how-card card-brown">
+            <h3>During the session</h3>
+            <p>We follow a natural flow that works for your pet. Some pets are confident right away, others need a moment to settle in. There we gradually build it up more.</p>
+
+            <div class="card-section">
+              <p><strong>Think:</strong></p>
+              <ul>
+                <li>Jumping</li>
+                <li>Sitting</li>
+                <li>Catching treats</li>
+              </ul>
+              <p>In between we capture candid portrait moments—sitting, lying down, and those little in-between expressions.</p>
+            </div>
           </div>
-          <div class="step">
-            <div class="step-number">4</div>
-            <h3>Post-Processing & Delivery</h3>
-            <p>We professionally edit your photos and deliver a beautiful collection within two weeks. You'll receive high-resolution digital files.</p>
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- After the session -->
+    <section class="how-it-works-after">
+      <div class="container">
+        <div class="after-content">
+          <h3>After the session</h3>
+          <p>Within two weeks, you'll receive a link to your personal gallery, where you'll be able to view and choose your favorite images.</p>
         </div>
       </div>
     </section>
@@ -61,9 +116,57 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Furry Tails Photography. All rights reserved.</p>
-      <p><a href="/contact">Get in touch</a></p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="/gallery/logo.jpeg" alt="Logo" width="30" height="30">
+            <span>Pet Photography</span>
+          </div>
+          <p>Capturing the joy and personality of your beloved pets.</p>
+        </div>
+        <div class="footer-col">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/how-it-works">Sessions</a></li>
+            <li><a href="/prices">Prices</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LET'S CONNECT</h4>
+          <ul>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+            <li><a href="mailto:hello@furrytails.com">Email</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <a href="/contact" class="footer-cta">BOOK A SESSION</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Furry Tails Pet Photography. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+      });
+    });
+  </script>
 </body>
 </html>
