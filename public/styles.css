@@ -1479,6 +1479,10 @@ footer {
   .feature-card {
     padding: 1rem;
   }
+
+  .prices-hero-content {
+    min-height: 450px;
+  }
 }
 
 /* Contact Page */
@@ -2033,37 +2037,43 @@ footer {
 
 .prices-hero-content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-direction: row-reverse;
-  background-color: #4db8a8;
-  padding: 40px;
+  align-items: stretch;
+  gap: 0;
+  background-color: #39a291;
+  padding: 0;
   border-radius: 30px;
+  height: 320px;
 }
 
 .prices-hero-image {
-  flex: 0 0 280px;
-  height: auto;
+  flex: 0 0 auto;
+  width: 400px;
+  height: 100%;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 0 30px 30px 0;
+  order: 2;
 }
 
 .prices-hero-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
+  margin-top: 20px;
 }
 
 .prices-hero-text {
   flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .prices-hero-text h1 {
   font-family: 'Anton', sans-serif;
-  font-size: 2.8rem;
-  margin: 0 0 25px 0;
+  font-size: 2.6rem;
+  margin: 30px 0 25px 0;
   color: #000;
   line-height: 1.2;
   font-weight: 400;
@@ -2161,7 +2171,7 @@ footer {
 }
 
 .pricing-card-premium {
-  background-color: #6cbfcd;
+  background-color: #39a291;
 }
 
 .card-price-section {
@@ -2179,6 +2189,27 @@ footer {
 
 .pricing-card-premium .card-price-section {
   background-color: transparent;
+}
+
+.card-price-section .card-image {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.pricing-card-basic .card-price-section .card-image {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-price-section .card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .card-name {
@@ -3645,11 +3676,16 @@ footer {
 @media (max-width: 1024px) {
   .prices-hero-content {
     flex-direction: column;
+    height: auto;
+    min-height: 320px;
   }
 
   .prices-hero-image {
-    width: 150px;
-    height: 210px;
+    display: none;
+  }
+
+  .prices-hero-text h1 {
+    font-size: 1rem;
   }
 
   .timeline-steps {
@@ -3685,9 +3721,17 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .prices-hero {
+    padding: 20px 0;
+  }
+
   .prices-hero-content {
-    padding: 30px;
-    gap: 20px;
+    padding: 0;
+    gap: 0;
+  }
+
+  .prices-hero-text h1 {
+    font-size: 1.5rem;
   }
 
   .prices-hero-text h2 {
@@ -3783,7 +3827,7 @@ footer {
   }
 
   .prices-hero-text h1 {
-    font-size: 2.8rem;
+    font-size: 2.1rem;
   }
 
   .pricing-cards-grid {
@@ -3818,7 +3862,7 @@ footer {
 /* Responsive - Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .prices-hero {
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
   .prices-hero-text h1 {
@@ -3830,12 +3874,11 @@ footer {
   }
 
   .prices-section {
-    padding: 50px 0;
+    padding: 0 0 50px 0;
   }
 
   .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .pricing-cards-grid {
@@ -3885,8 +3928,12 @@ footer {
     font-size: 0.85rem;
   }
 
+  .flexibility-text h3 {
+    font-size: 1.3rem;
+  }
+
   .prices-add-info {
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
   }
 
   .add-info-wrapper {
