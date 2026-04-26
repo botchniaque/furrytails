@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Light Blue: Text top, Image bottom (large, 40% smaller) - 50% taller */
 .card-lightblue {
-  background: #6bc6d5;
+  background: #6cbfcd;
   color: #000;
   height: 472px;
   flex-shrink: 0;
@@ -355,13 +355,22 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 90%;
 }
 
+.card-lightblue .card-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card-lightblue .card-image {
-  position: absolute;
-  width: 384px;
-  height: 268px;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  width: auto;
+  height: auto;
+  flex: 1;
+  margin-top: 20px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
 }
 
 /* Brown: Text top, Image bottom-right - 50% taller, image 30% bigger */
@@ -394,6 +403,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: contain;
   border-radius: 12px;
+}
+
+.card-lightblue .pet-img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
 }
 
 /* About Section */
@@ -1034,6 +1049,11 @@ footer {
     width: auto;
   }
 
+  .card-lightblue .card-image {
+    width: auto;
+    height: auto;
+  }
+
   .card-pink-bottom {
     position: relative;
     bottom: auto;
@@ -1182,6 +1202,20 @@ footer {
 
   .card-teal .pet-img {
     width: 100%;
+  }
+
+  .card-lightblue {
+    flex-direction: column;
+  }
+
+  .card-lightblue .card-image {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .card-lightblue .pet-img {
+    width: 100%;
+    height: auto;
   }
 
   .navbar .container {
@@ -1702,7 +1736,7 @@ footer {
 }
 
 .card-lightblue {
-  background-color: #6bc6d5;
+  background-color: #6cbfcd;
 }
 
 .card-pink {
@@ -1929,7 +1963,7 @@ footer {
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  background-color: #6bc6d5;
+  background-color: #6cbfcd;
 }
 
 .pricing-card:hover {
@@ -1938,7 +1972,7 @@ footer {
 }
 
 .pricing-card-basic {
-  background-color: #6bc6d5;
+  background-color: #6cbfcd;
 }
 
 .pricing-card-standard {
@@ -1946,7 +1980,7 @@ footer {
 }
 
 .pricing-card-premium {
-  background-color: #6bc6d5;
+  background-color: #6cbfcd;
 }
 
 .card-price-section {
@@ -2629,7 +2663,7 @@ footer {
 }
 
 .price-card-v3-teal {
-  background: #6bc6d5;
+  background: #6cbfcd;
   color: #000;
 }
 
@@ -3008,13 +3042,13 @@ footer {
 }
 
 .price-lightblue {
-  background-color: #6bc6d5;
-  border: 3px solid #6bc6d5;
+  background-color: #6cbfcd;
+  border: 3px solid #6cbfcd;
 }
 
 .price-blue {
-  background-color: #6bc6d5;
-  border: 3px solid #6bc6d5;
+  background-color: #6cbfcd;
+  border: 3px solid #6cbfcd;
 }
 
 .price-pink {
@@ -3036,12 +3070,12 @@ footer {
 
 .price-card.price-lightblue > h4,
 .price-card.price-lightblue > p {
-  background-color: #6bc6d5;
+  background-color: #6cbfcd;
 }
 
 .price-card.price-blue > h4,
 .price-card.price-blue > p {
-  background-color: #6bc6d5;
+  background-color: #6cbfcd;
 }
 
 .price-card.price-pink > h4,
@@ -3317,11 +3351,11 @@ footer {
 
 
 .card-lightblue {
-  background-color: #6bc6d5;
+  background-color: #6cbfcd;
 }
 
 .card-blue {
-  background-color: #6bc6d5;
+  background-color: #6cbfcd;
 }
 
 .card-pink {
