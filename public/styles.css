@@ -381,7 +381,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Brown: Text top, Image bottom-right - 50% taller, image 30% bigger */
 .card-brown {
-  background: #a68672;
+  background: #9e5c2a;
   color: #000;
   height: 360px;
   flex-shrink: 0;
@@ -392,15 +392,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-brown .card-text-container {
   flex: 0 1 auto;
-  max-width: 65%;
+}
+
+.card-brown-bottom {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.card-brown-button {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 120px;
 }
 
 .card-brown .card-image {
   position: absolute;
-  width: 182px;
-  height: 208px;
-  bottom: 15px;
-  right: 15px;
+  width: 300px;
+  height: auto;
+  right: 0;
+  bottom: 0;
+}
+
+.card-brown .pet-img {
+  width: 100%;
+  height: auto;
 }
 
 /* Card Images */
@@ -1066,6 +1085,40 @@ footer {
     width: 220px !important;
   }
 
+  .card-brown {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .card-brown .card-text-container {
+    max-width: 100%;
+    flex: 0 1 auto;
+  }
+
+  .card-brown-bottom {
+    flex-direction: row;
+    align-items: flex-start;
+    flex: 0 1 auto;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .card-brown-button {
+    min-width: auto;
+    justify-content: flex-start;
+    margin-left: 190px;
+    margin-top: -1rem;
+  }
+
+  .card-brown .card-image {
+    width: 280px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 60% !important;
+    transform: translateY(-50%) !important;
+  }
+
   .card-lightblue .card-image {
     width: auto;
     height: auto;
@@ -1167,6 +1220,23 @@ footer {
     right: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .card-brown-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  .card-brown-button {
+    min-width: auto;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+    justify-content: center;
+    width: 100%;
   }
 
   .pet-img {
@@ -1824,7 +1894,7 @@ footer {
 }
 
 .card-brown {
-  background-color: #a68672;
+  background-color: #9e5c2a;
 }
 
 /* After the session */
@@ -3137,8 +3207,8 @@ footer {
 }
 
 .price-brown {
-  background-color: #a68672;
-  border: 3px solid #a68672;
+  background-color: #9e5c2a;
+  border: 3px solid #9e5c2a;
 }
 
 .price-card.price-lightblue,
@@ -3165,7 +3235,7 @@ footer {
 
 .price-card.price-brown > h4,
 .price-card.price-brown > p {
-  background-color: #a68672;
+  background-color: #9e5c2a;
 }
 
 /* Add-ons */
@@ -3443,7 +3513,7 @@ footer {
 }
 
 .card-brown {
-  background-color: #a68672;
+  background-color: #9e5c2a;
 }
 
 /* Add-ons Section */
