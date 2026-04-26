@@ -160,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .card-text-container {
@@ -269,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pink: Text centered top, Image bottom-left, subtitle and button at middle height of picture - 50% taller, image 30% bigger */
 .card-pink {
-  background: #f0388f;
+  background: #eb4c74;
   color: #000;
   height: 472px;
   flex-shrink: 0;
@@ -332,10 +333,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-pink .card-image {
   position: absolute;
-  width: 234px;
-  height: 286px;
+  width: 300px;
+  height: auto;
   bottom: 20px;
-  left: 30px;
+  left: 0;
+}
+
+.card-pink .pet-img {
+  width: 100%;
+  height: auto;
 }
 
 /* Light Blue: Text top, Image bottom (large, 40% smaller) - 50% taller */
@@ -1003,6 +1009,13 @@ footer {
 }
 
 /* Tablet: Images on the side */
+@media (max-width: 1185px) and (min-width: 1025px) {
+  .card-pink .card-image {
+    width: 250px !important;
+    bottom: 60px !important;
+  }
+}
+
 @media (max-width: 1024px) and (min-width: 769px) {
   .hero-cards {
     flex-direction: column;
@@ -1047,6 +1060,10 @@ footer {
 
   .card-teal .card-image {
     width: auto;
+  }
+
+  .card-pink .card-image {
+    width: 220px !important;
   }
 
   .card-lightblue .card-image {
@@ -1186,6 +1203,32 @@ footer {
   }
 }
 
+@media (max-width: 549px) and (min-width: 481px) {
+  .hero-cards {
+    flex-direction: column;
+  }
+
+  .card-pink,
+  .card-brown {
+    width: 100%;
+  }
+
+  .card-pink .card-image {
+    position: relative !important;
+    width: 100% !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin-top: 1.5rem;
+  }
+
+  .card-brown .card-image {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    bottom: auto !important;
+  }
+}
+
 @media (max-width: 480px) {
   .card-teal {
     flex-direction: column;
@@ -1223,6 +1266,31 @@ footer {
   .card-lightblue .pet-img {
     width: 100%;
     height: auto;
+  }
+
+  .card-pink {
+    padding: 30px 25px 25px 25px !important;
+    width: 100%;
+  }
+
+  .card-pink .card-image {
+    width: 100% !important;
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin-top: 1.5rem;
+  }
+
+  .card-brown {
+    padding: 30px 25px 25px 25px !important;
+    width: 100%;
+  }
+
+  .card-brown .card-image {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    bottom: auto !important;
   }
 
   .navbar .container {
@@ -1273,6 +1341,7 @@ footer {
   .hero-cards {
     padding: 0 10px;
     gap: 15px;
+    flex-direction: column;
   }
 
   .hero-card {
@@ -1464,10 +1533,10 @@ footer {
 }
 
 .contact-submit-btn {
-  background-color: #e84a81;
+  background-color: #eb4c74;
   color: #fff;
   padding: 12px 30px;
-  border: 2px solid #e84a81;
+  border: 2px solid #eb4c74;
   border-radius: 25px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -1480,7 +1549,7 @@ footer {
 
 .contact-submit-btn:hover {
   background-color: #fff;
-  color: #e84a81;
+  color: #eb4c74;
 }
 
 /* Contact Social Section */
@@ -1497,7 +1566,7 @@ footer {
   margin: 0 auto;
   color: #fff;
   justify-content: space-between;
-  background: #e84a81;
+  background: #eb4c74;
   padding: 25px 30px;
   border-radius: 20px;
 }
@@ -1545,7 +1614,7 @@ footer {
 
 .social-link {
   background-color: #fff;
-  color: #e84a81;
+  color: #eb4c74;
   padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
@@ -1751,7 +1820,7 @@ footer {
 }
 
 .card-pink {
-  background-color: #e84a81;
+  background-color: #eb4c74;
 }
 
 .card-brown {
@@ -1916,7 +1985,7 @@ footer {
 }
 
 .hero-cta {
-  background: #e84a81;
+  background: #eb4c74;
   color: #000;
   padding: 18px 24px;
   border-radius: 25px;
@@ -1987,7 +2056,7 @@ footer {
 }
 
 .pricing-card-standard {
-  background-color: #e84a81;
+  background-color: #eb4c74;
 }
 
 .pricing-card-premium {
@@ -2414,7 +2483,7 @@ footer {
 }
 
 .add-info-pink {
-  background-color: #e84a81;
+  background-color: #eb4c74;
 }
 
 .add-info-teal {
@@ -2466,7 +2535,7 @@ footer {
 }
 
 .add-info-pink .btn-info {
-  color: #e84a81;
+  color: #eb4c74;
 }
 
 .add-info-teal .btn-info {
@@ -2679,7 +2748,7 @@ footer {
 }
 
 .price-card-v3-pink {
-  background: #e84a81;
+  background: #eb4c74;
   color: #000;
 }
 
@@ -2812,7 +2881,7 @@ footer {
 }
 
 .prices-info-v3.prices-info-v3-pink {
-  background-color: #e84a81;
+  background-color: #eb4c74;
 }
 
 .prices-info-v3.prices-info-v3-pink .info-content h3,
@@ -3063,8 +3132,8 @@ footer {
 }
 
 .price-pink {
-  background-color: #e84a81;
-  border: 3px solid #e84a81;
+  background-color: #eb4c74;
+  border: 3px solid #eb4c74;
 }
 
 .price-brown {
@@ -3091,7 +3160,7 @@ footer {
 
 .price-card.price-pink > h4,
 .price-card.price-pink > p {
-  background-color: #e84a81;
+  background-color: #eb4c74;
 }
 
 .price-card.price-brown > h4,
@@ -3370,7 +3439,7 @@ footer {
 }
 
 .card-pink {
-  background-color: #e84a81;
+  background-color: #eb4c74;
 }
 
 .card-brown {
