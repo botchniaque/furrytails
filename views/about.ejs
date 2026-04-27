@@ -3,38 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me - Furry Tails Photography</title>
+  <title>About - Furry Tails Photography</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="container">
       <div class="logo">
-        <a href="/">Furry Tails Photography</a>
+        <a href="/">
+          <img src="/gallery/logo.jpeg" alt="Logo" width="40" height="40">
+          Pet Photography
+        </a>
       </div>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/how-it-works">How It Works</a></li>
-        <li><a href="/about">About Me</a></li>
-        <li><a href="/prices">Prices</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="/contact">Contact</a></li>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/gallery">GALLERY</a></li>
+        <li><a href="/how-it-works">SESSIONS</a></li>
+        <li><a href="/prices">PRICES</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/contact">CONTACT</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <section class="page-header">
+    <!-- About Hero Section -->
+    <section class="about-hero">
       <div class="container">
-        <h1>About Me</h1>
-        <p>Your pet's biggest fan with a camera</p>
+        <div class="about-hero-box">
+          <div class="about-hero-text">
+            <h2>About</h2>
+            <p>Your pet's biggest fan with a camera</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="content">
+    <!-- About Content Section -->
+    <section class="about-content-section">
       <div class="container">
         <div class="about-content">
-          <h2>Hi, I'm a Pet Photographer!</h2>
+          <h3>Hi, I'm a Pet Photographer!</h3>
           <p>With over 5 years of experience photographing pets, I've developed a passion for capturing those candid, joyful moments that make our furry friends so special. Whether it's a playful pup, a curious cat, or any other beloved pet, I love bringing out their unique personality through photography.</p>
 
           <h3>My Approach</h3>
@@ -54,9 +67,57 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Furry Tails Photography. All rights reserved.</p>
-      <p><a href="/contact">Get in touch</a></p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="/gallery/logo.jpeg" alt="Logo" width="30" height="30">
+            <span>Pet Photography</span>
+          </div>
+          <p>Capturing the joy and personality of your beloved pets.</p>
+        </div>
+        <div class="footer-col">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/how-it-works">Sessions</a></li>
+            <li><a href="/prices">Prices</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LET'S CONNECT</h4>
+          <ul>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+            <li><a href="mailto:hello@furrytails.com">Email</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <a href="/contact" class="footer-cta">BOOK A SESSION</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Furry Tails Pet Photography. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+      });
+    });
+  </script>
 </body>
 </html>
