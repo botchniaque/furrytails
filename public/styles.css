@@ -754,8 +754,6 @@ footer {
 }
 
 .pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-card.featured {
@@ -2047,11 +2045,13 @@ footer {
 
 .prices-hero-image {
   flex: 0 0 auto;
-  width: 400px;
+  width: 350px;
   height: 100%;
   overflow: hidden;
   border-radius: 0 30px 30px 0;
   order: 2;
+  display: flex;
+  align-items: flex-end;
 }
 
 .prices-hero-image img {
@@ -2059,12 +2059,11 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
-  margin-top: 20px;
 }
 
 .prices-hero-text {
   flex: 1;
-  padding: 40px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2073,26 +2072,28 @@ footer {
 .prices-hero-text h1 {
   font-family: 'Anton', sans-serif;
   font-size: 2.6rem;
-  margin: 30px 0 25px 0;
+  margin: 0 0 25px 0;
   color: #000;
   line-height: 1.2;
   font-weight: 400;
 }
 
 .prices-hero-text .hero-body {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-family: 'Spectral', serif;
+  font-size: 1.1rem;
   margin: 0 0 20px 0;
   color: #000;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 .prices-hero-text .hero-secondary {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
+  font-family: 'Spectral', serif;
+  font-size: 1rem;
   margin: 0 0 25px 0;
   color: #000;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 .hero-cta {
@@ -2158,20 +2159,18 @@ footer {
 }
 
 .pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-card-basic {
-  background-color: #6cbfcd;
+  background-color: #b25e1c;
 }
 
 .pricing-card-standard {
-  background-color: #eb4c74;
+  background-color: #ee567c;
 }
 
 .pricing-card-premium {
-  background-color: #39a291;
+  background-color: #58a998;
 }
 
 .card-price-section {
@@ -2200,13 +2199,21 @@ footer {
 }
 
 .pricing-card-basic .card-price-section .card-image {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-card-basic .card-price-section .card-image img {
+  width: 80%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .card-price-section .card-image img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
   object-fit: cover;
@@ -2221,17 +2228,17 @@ footer {
 
 .card-tagline {
   font-family: 'Spectral', serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0 0 15px 0;
   color: #000;
 }
 
 .card-price {
-  font-family: 'Anton', sans-serif;
-  font-size: 3rem;
-  margin: 0;
-  color: #000 !important;
+  font-family: 'Spectral', serif;
+  font-size: 3.8rem;
+  margin: 15px 0 0 0;
+  color: #fff !important;
 }
 
 .card-content {
@@ -2241,7 +2248,6 @@ footer {
   gap: 20px;
   flex: 1;
   background-color: transparent;
-  border-top: 1px solid #666;
   margin: 0;
 }
 
@@ -2421,7 +2427,7 @@ footer {
 
 .flexibility-text h3 {
   font-family: 'Anton', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 0 0 15px 0;
   color: #fff;
   font-weight: bold;
@@ -3537,7 +3543,7 @@ footer {
 }
 
 .card-price {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Spectral', serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
@@ -3678,6 +3684,7 @@ footer {
     flex-direction: column;
     height: auto;
     min-height: 320px;
+    padding: 0;
   }
 
   .prices-hero-image {
@@ -3865,8 +3872,13 @@ footer {
     padding: 20px 0;
   }
 
+  .prices-hero-content {
+    padding: 10px 0 30px 0;
+  }
+
   .prices-hero-text h1 {
     font-size: 2rem;
+    text-align: center;
   }
 
   .prices-hero-text p {
