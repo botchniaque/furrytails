@@ -4024,13 +4024,13 @@ footer {
 
 .gallery-hero-box {
   background: #39a291;
-  padding: 0;
+  padding: 5px 0;
   border-radius: 30px;
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   gap: 0;
-  height: 220px;
+  height: auto;
   overflow: hidden;
 }
 
@@ -4211,7 +4211,7 @@ footer {
 
 .gallery-cta-box {
   background: #eb4c74;
-  padding: 0;
+  padding: 0 40px;
   border-radius: 30px;
   display: flex;
   align-items: stretch;
