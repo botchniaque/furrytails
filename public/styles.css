@@ -264,9 +264,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 360px;
   flex-shrink: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-right: 0;
+  position: relative;
 }
 
 .card-teal .card-text-container {
@@ -277,9 +278,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-teal .card-image {
   position: absolute;
-  width: auto;
+  width: 45%;
   height: 100%;
-  right: 0;
+  right: -10px;
   top: 0;
 }
 
@@ -1141,6 +1142,8 @@ footer {
   .card-teal .card-image {
     width: auto;
     height: 240px !important;
+    right: -10px !important;
+    position: absolute !important;
   }
 
   .card-teal .pet-img {
@@ -1464,7 +1467,10 @@ footer {
   .card-teal .card-image {
     width: 100%;
     max-width: 250px;
-    margin: 0 0 0 auto;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .card-teal .pet-img {
@@ -5011,15 +5017,16 @@ footer {
 
 .gallery-cta-box {
   background: #eb4c74;
-  padding: 0 40px;
+  padding: 0 40px 0 40px;
   border-radius: 30px;
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0;
   margin: 0;
   height: 280px;
   overflow: hidden;
+  position: relative;
 }
 
 .gallery-cta-text {
@@ -5056,16 +5063,19 @@ footer {
 .gallery-cta-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .gallery-cta-button {
-  flex: 0 0 auto;
+  position: absolute;
+  top: 130px;
+  left: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  background: #eb4c74;
+  padding: 0;
+  background: transparent;
+  z-index: 10;
 }
 
 .gallery-cta-btn {
