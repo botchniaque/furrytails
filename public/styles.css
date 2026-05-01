@@ -455,7 +455,7 @@ h1, h2, h3, h4, h5, h6 {
 /* About Section */
 .about-section {
   background-color: #f5f5f5;
-  padding: 60px 20px;
+  padding: 0 20px 60px 20px;
 }
 
 .about-wrapper {
@@ -1092,9 +1092,16 @@ footer {
 
   .card-teal,
   .card-pink,
-  .card-lightblue,
-  .card-brown {
+  .card-lightblue {
     height: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card-brown {
+    height: 270px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1107,6 +1114,10 @@ footer {
   .card-brown .card-text-container {
     max-width: 55%;
     padding-right: 0;
+  }
+
+  .card-teal .card-buttons {
+    justify-content: center;
   }
 
   .card-teal .card-image,
@@ -1124,6 +1135,12 @@ footer {
 
   .card-teal .card-image {
     width: auto;
+    height: 240px !important;
+  }
+
+  .card-teal .pet-img {
+    height: 240px !important;
+    width: auto;
   }
 
   .card-pink .card-image {
@@ -1131,42 +1148,50 @@ footer {
   }
 
   .card-brown {
-    flex-direction: column;
-    height: auto;
-    align-items: flex-start;
+    align-items: stretch !important;
   }
 
   .card-brown .card-text-container {
-    max-width: 100%;
-    flex: 0 1 auto;
-  }
-
-  .card-brown-bottom {
-    flex-direction: row;
-    align-items: flex-start;
-    flex: 0 1 auto;
-    margin-top: 1rem;
-    width: 100%;
-  }
-
-  .card-brown-button {
-    min-width: auto;
+    max-width: 55%;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
-    margin-left: 190px;
-    margin-top: -1rem;
+  }
+
+  .card-brown .card-image {
+    align-self: center !important;
   }
 
   .card-brown .card-image {
     width: 280px !important;
-    position: absolute !important;
-    right: 0 !important;
-    top: 60% !important;
-    transform: translateY(-50%) !important;
+    height: 240px !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+
+  .card-brown .pet-img {
+    width: 280px !important;
+    height: 240px !important;
   }
 
   .card-lightblue .card-image {
-    width: auto;
-    height: auto;
+    width: 300px !important;
+    height: 240px !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+
+  .card-lightblue .pet-img {
+    width: 300px !important;
+    height: 240px !important;
   }
 
   .card-pink-bottom {
@@ -1211,6 +1236,12 @@ footer {
     font-size: 0.8rem;
   }
 
+  .btn-link {
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
   .hero-cards {
     flex-direction: column;
     gap: 20px;
@@ -1237,7 +1268,7 @@ footer {
 
   .card-teal .card-image {
     position: relative !important;
-    width: 300px;
+    width: 350px;
     height: auto !important;
     flex-shrink: 0;
     border-radius: 20px;
@@ -1246,7 +1277,7 @@ footer {
 
   .card-teal .pet-img {
     height: auto !important;
-    width: 300px;
+    width: 350px;
   }
 
   .card-pink,
@@ -1264,19 +1295,25 @@ footer {
     padding-right: 0;
   }
 
+  .card-brown .card-text-container {
+    text-align: center;
+    align-items: center;
+  }
+
   .card-pink .card-image,
   .card-lightblue .card-image,
   .card-brown .card-image {
     position: relative !important;
-    width: 100% !important;
+    width: 350px !important;
     height: auto !important;
+    flex-shrink: 0;
     aspect-ratio: auto;
     right: auto !important;
     top: auto !important;
     bottom: auto !important;
     left: auto !important;
     transform: none !important;
-    margin-top: 1.5rem;
+    margin: 0 auto;
     border-radius: 20px;
   }
 
@@ -4696,7 +4733,7 @@ footer {
 
 /* About Content Section */
 .about-content-section {
-  padding: 40px 0;
+  padding: 0 0 40px 0;
 }
 
 .about-content-wrapper {
@@ -4746,9 +4783,15 @@ footer {
 
 .about-style-box {
   background-color: #edc9a5;
-  padding: 40px 80px;
+  padding: 40px 40px;
   border-radius: 25px;
-  margin-top: 40px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-style-box {
+    padding: 20px;
+  }
 }
 
 .about-style-box h4 {
