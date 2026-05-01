@@ -293,12 +293,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 30px;
-  position: relative;
 }
 
 .card-pink .card-text-container {
   flex: 0 1 auto;
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-pink .card-text-container h2 {
@@ -310,13 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-pink-bottom {
-  position: absolute;
-  bottom: 153px;
-  right: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  display: none;
 }
 
 .card-pink .subtle-text {
@@ -348,12 +345,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-pink .card-image {
-  position: absolute;
-  /*width: 40%;*/
-  max-width: 300px;
+  position: relative;
+  width: auto;
   height: auto;
-  bottom: 20px;
-  left: 0;
+  flex: 0 1 auto;
+  margin-top: 0;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
 }
 
 .card-pink .pet-img {
@@ -1047,13 +1047,6 @@ footer {
 }
 
 /* Tablet: Images on the side */
-@media (max-width: 1185px) and (min-width: 1025px) {
-  .card-pink .card-image {
-    width: 250px !important;
-    bottom: 60px !important;
-  }
-}
-
 @media (max-width: 940px) {
   .gallery-cta-box {
     flex-direction: row;
@@ -1154,6 +1147,12 @@ footer {
 
   .card-pink .card-image {
     width: 220px !important;
+    height: 240px !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
   }
 
   .card-brown {
