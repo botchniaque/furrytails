@@ -1134,13 +1134,18 @@ footer {
   }
 
   .card-teal .card-image {
-    width: auto;
+    width: 40% !important;
     height: 240px !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
   }
 
   .card-teal .pet-img {
     height: 240px !important;
-    width: auto;
+    width: auto !important;
   }
 
   .card-pink .card-image {
