@@ -1447,6 +1447,12 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .btn-link {
+    display: inline-block;
+    margin-left: 0;
+    transform: none;
+  }
+
   .card-teal {
     flex-direction: column;
   }
@@ -1457,13 +1463,13 @@ footer {
 
   .card-teal .card-image {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     margin: 0 0 0 auto;
   }
 
   .card-teal .pet-img {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
   }
 
   .card-lightblue {
