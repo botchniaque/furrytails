@@ -1081,7 +1081,7 @@ footer {
   }
 }
 
-@media (max-width: 1172px) and (min-width: 1025px) {
+@media (max-width: 1157px) and (min-width: 1025px) {
   .card-pink .card-image {
     width: 200px !important;
   }
@@ -1247,7 +1247,7 @@ footer {
   }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 768px) {
   .nav-links {
     gap: 1rem;
     font-size: 0.8rem;
@@ -1420,7 +1420,7 @@ footer {
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 642px) {
   .hamburger {
     display: flex;
   }
@@ -1627,7 +1627,9 @@ footer {
   }
 
   .how-it-works-hero .hero-image {
-    width: 80% !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: 80%;
     height: 250px !important;
   }
 
@@ -1635,6 +1637,15 @@ footer {
     width: 100% !important;
     height: 100% !important;
     object-fit: contain !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .how-it-works-hero .hero-image {
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: 40%;
+    min-width: 200px;
   }
 }
 
@@ -1742,8 +1753,7 @@ footer {
   color: #000;
 }
 
-.contact-detail-item img,
-.contact-detail-item svg {
+.contact-detail-item img {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
@@ -1982,7 +1992,8 @@ footer {
   display: flex;
   align-items: stretch;
   gap: 0;
-  height: 280px;
+  height: auto;
+  max-height: 250px;
   overflow: hidden;
 }
 
@@ -1996,13 +2007,16 @@ footer {
 }
 
 .hero-image {
-  flex: 0 0 auto;
-  width: 350px;
-  height: 100%;
+  flex: 1 1 auto;
+  width: auto;
+  max-width: 350px;
+  height: auto;
+  max-height: 250px;
   overflow: hidden;
   border-radius: 0 30px 30px 0;
   display: flex;
   align-items: flex-end;
+  min-width: 200px;
 }
 
 .hero-image img {
@@ -2261,7 +2275,6 @@ footer {
   background-color: #39a291;
   padding: 0;
   border-radius: 30px;
-  height: 320px;
 }
 
 .prices-hero-image {
@@ -2284,7 +2297,7 @@ footer {
 
 .prices-hero-text {
   flex: 1;
-  padding: 0 40px;
+  padding: 0 20px 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3731,7 +3744,7 @@ footer {
 
 .prices-hero-image {
   flex-shrink: 0;
-  width: 200px;
+  width: 220px;
   height: 280px;
 }
 
@@ -4025,6 +4038,18 @@ footer {
 
   .card-features li {
     font-size: 0.85rem;
+  }
+
+  .card-price-section .card-image {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .card-price-section .card-image img {
+    width: 100%;
+    max-width: 400px;
   }
 
   .prices-addon-card {
@@ -4750,7 +4775,7 @@ footer {
   justify-content: flex-start;
   align-items: center;
   background: #39a291;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 30px 2px 30px;
 }
 
 .about-hero-text h2 {
@@ -4777,11 +4802,13 @@ footer {
 }
 
 .about-text-and-image {
-  display: block;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 .about-content {
-  display: block;
+  flex: 1;
   overflow: auto;
   padding-left: 40px;
 }
@@ -4803,7 +4830,7 @@ footer {
 .about-content h3 {
   font-family: 'Anton', sans-serif;
   font-size: 1.8rem;
-  margin: 10px 0 15px 0;
+  margin: 30px 0 15px 0;
   color: #000;
 }
 
@@ -4827,10 +4854,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .about-content {
-    padding-left: 20px;
-  }
-
   .about-style-box {
     padding: 20px;
   }
@@ -4899,8 +4922,8 @@ footer {
 
 .cta-button {
   display: inline-block;
-  background-color: #39a291;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 12px 30px;
   border-radius: 25px;
   text-decoration: none;
@@ -4908,7 +4931,7 @@ footer {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   transition: all 0.3s;
-  border: 2px solid #39a291;
+  border: 2px solid #fff;
 }
 
 .cta-button:hover {
