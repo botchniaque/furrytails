@@ -1247,12 +1247,14 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
   .nav-links {
     gap: 1rem;
     font-size: 0.8rem;
   }
+}
 
+@media (max-width: 768px) {
   .btn-link {
     display: inline-block;
     margin-left: 50%;
@@ -1420,7 +1422,7 @@ footer {
   }
 }
 
-@media (max-width: 642px) {
+@media (max-width: 750px) {
   .hamburger {
     display: flex;
   }
