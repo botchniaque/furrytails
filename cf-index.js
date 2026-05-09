@@ -7,7 +7,7 @@ const de = await import('./translations/de.json', { assert: { type: 'json' } });
 const translations = { en: en.default, de: de.default };
 
 app.get('/', (c) => {
-  return c.redirect('/en/', 301);
+  return c.redirect('/en');
 });
 
 app.get('/:lang', async (c) => {
