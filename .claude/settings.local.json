@@ -16,7 +16,8 @@
       "Bash(awk '/^@media.*768px/,/^@media/ {print NR\": \"$0}' /Users/sbochniak/code/furrytails/public/styles.css)",
       "Bash(identify *)",
       "Bash(awk *)",
-      "Bash(pkill -f \"node.*server.js\")"
+      "Bash(pkill -f \"node.*server.js\")",
+      "Bash(npm run *)"
     ]
   }
 }
