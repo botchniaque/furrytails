@@ -17,7 +17,7 @@ export default {
             return new Response('Method not allowed', { status: 405 });
         }
 
-        const { name, email, message } = await request.json();
+        const { name, email, phone, message } = await request.json();
 
         const response = await fetch('https://api.resend.com/emails', {
             method: 'POST',
@@ -29,7 +29,7 @@ export default {
                 from: 'noreply@furry-tails.de',
                 to: 'hello@furry-tails.de',
                 subject: `New contact form submission from ${name}`,
-                html: `<p><strong>From:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message}</p>`
+                html: `<p><strong>From:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Phone:</strong> ${phone || 'Not provided'}</p><p><strong>Message:</strong></p><p>${message}</p>`
             })
         });
 

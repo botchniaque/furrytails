@@ -4,15 +4,6 @@
 name = "furrytails"
 compatibility_date = "2026-05-10"
 
-# New for 2026: Explicitly declare which secrets your app needs
-#[secrets]
-#required = ["DATABASE_URL", "STRIPE_KEY"]
-
-## Standard Environment Variables (Non-sensitive)
-#[vars]
-#API_URL = "https://api.example.com"
-#NODE_ENV = "production"
-
 # Observability (New default recommendation)
 [observability]
 enabled = true
