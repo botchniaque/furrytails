@@ -1,5 +1,18 @@
 export default {
     async fetch(request) {
+        const corsHeaders = {
+            'Access-Control-Allow-Origin': 'https://furry-tails.de',
+            'Access-Control-Allow-Methods': 'POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type',
+        };
+
+        if (request.method === 'OPTIONS') {
+            return new Response(null, {
+                status: 204,
+                headers: corsHeaders,
+            });
+        }
+
         if (request.method !== 'POST') {
             return new Response('Method not allowed', { status: 405 });
         }
@@ -21,9 +34,21 @@ export default {
         });
 
         if (response.ok) {
-            return new Response(JSON.stringify({ success: true }), { status: 200 });
+            return new Response(JSON.stringify({ success: true }), {
+                status: 200,
+                headers: {
+                    ...corsHeaders,
+                    'Content-Type': 'application/json',
+                }
+            });
         } else {
-            return new Response(JSON.stringify({ error: 'Failed to send email' }), { status: 500 });
+            return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+                status: 500,
+                headers: {
+                    ...corsHeaders,
+                    'Content-Type': 'application/json',
+                }
+            });
         }
     }
 };
