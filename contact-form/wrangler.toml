@@ -1,0 +1,6 @@
+name = "furrytails-contact"
+main = "worker.js"
+compatibility_date = "2026-05-10"
+
+[vars]
+RESEND_API_KEY = "re_65mU2dPS_8xuhoYWNbYkc3rKxSXKjcSiR"

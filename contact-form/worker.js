@@ -1,5 +1,5 @@
 export default {
-    async fetch(request) {
+    async fetch(request, env) {
         const corsHeaders = {
             'Access-Control-Allow-Origin': 'https://furry-tails.de',
             'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -22,7 +22,7 @@ export default {
         const response = await fetch('https://api.resend.com/emails', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+                'Authorization': `Bearer ${env.RESEND_API_KEY}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
