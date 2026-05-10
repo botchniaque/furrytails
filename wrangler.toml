@@ -2,11 +2,11 @@
 "$schema" = "node_modules/wrangler/config-schema.json"
 
 name = "furrytails"
-main = "server.js" # The entry point to your worker
 compatibility_date = "2026-05-10"
 
-# Essential if you're porting a Node/Express app
-compatibility_flags = ["nodejs_compat"]
+# Build settings for static site
+build = { command = "npm run build", cwd = "." }
+build_output_dir = "dist"
 
 # New for 2026: Explicitly declare which secrets your app needs
 #[secrets]
@@ -21,7 +21,3 @@ compatibility_flags = ["nodejs_compat"]
 [observability]
 enabled = true
 
-# If you are hosting a static version (Workers Assets)
- [assets]
- directory = "./public"
- binding = "ASSETS"
