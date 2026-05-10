@@ -1,81 +1,58 @@
-import { Hono } from 'hono';
+import express from 'express';
 
-const app = new Hono();
+const app = express();
 
-const en = await import('./translations/en.json', { assert: { type: 'json' } });
-const de = await import('./translations/de.json', { assert: { type: 'json' } });
-const translations = { en: en.default, de: de.default };
+app.set('view engine', 'ejs');
+app.set('views', './views');
+app.use(express.static('./public'));
 
-app.get('/', (c) => {
-  return c.redirect('/en/', 301);
-});
-
-app.get('/:lang', async (c) => {
-  const lang = c.req.param('lang') || 'en';
-  if (!['en', 'de'].includes(lang)) {
-    return c.notFound();
-  }
-
+const renderPage = async (req, res, page) => {
   try {
+    const lang = req.params.lang || 'en';
+    const en = await import('./translations/en.json', { assert: { type: 'json' } });
+    const de = await import('./translations/de.json', { assert: { type: 'json' } });
+    const translations = { en: en.default, de: de.default };
+
     const t = translations[lang] || translations.en;
-    const html = await getPageContent('index', lang, t, '', lang === 'en' ? 'de' : 'en');
-    return c.html(html);
+    const routePath = req.path.replace(/^\/(en|de)/, '');
+    const otherLang = lang === 'en' ? 'de' : 'en';
+    const currentPath = routePath === '/' ? '' : routePath;
+    const template = lang === 'de' ? `${page}_de` : page;
+
+    res.render(template, { lang, t, currentPath, otherLang });
   } catch (err) {
-    return c.text('Error loading page: ' + err.message, 500);
+    res.status(500).send('Error rendering page: ' + err.message);
   }
+};
+
+app.get('/', (req, res) => {
+  res.redirect('/en/');
 });
 
-const pages = ['how-it-works', 'about', 'prices', 'gallery', 'contact'];
-
-pages.forEach(page => {
-  app.get(`/:lang/${page}`, async (c) => {
-    const lang = c.req.param('lang') || 'en';
-    if (!['en', 'de'].includes(lang)) {
-      return c.notFound();
-    }
-
-    try {
-      const t = translations[lang] || translations.en;
-      const html = await getPageContent(page, lang, t, `/${page}`, lang === 'en' ? 'de' : 'en');
-      return c.html(html);
-    } catch (err) {
-      return c.text('Error loading page: ' + err.message, 500);
-    }
-  });
+app.get('/:lang', (req, res) => {
+  renderPage(req, res, 'index');
 });
 
-async function getPageContent(page, lang, t, currentPath, otherLang) {
-  const templateName = lang === 'de' ? `${page}_de` : page;
-  try {
-    const response = await fetch(`file:///opt/buildhome/repo/dist/views/${templateName}.ejs`);
-    if (!response.ok) throw new Error(`Template not found: ${templateName}`);
-    return await response.text();
-  } catch (err) {
-    return `<h1>Page not found: ${page}</h1><p>${err.message}</p>`;
-  }
-}
-
-app.get('/public/*', async (c) => {
-  const path = c.req.path.replace('/public/', '');
-  try {
-    const response = await fetch(`file:///opt/buildhome/repo/dist/public/${path}`);
-    if (!response.ok) return c.notFound();
-    const buffer = await response.arrayBuffer();
-    const contentType = getContentType(path);
-    return new Response(buffer, { headers: { 'Content-Type': contentType } });
-  } catch (err) {
-    return c.notFound();
-  }
+app.get('/:lang/how-it-works', (req, res) => {
+  renderPage(req, res, 'how-it-works');
 });
 
-function getContentType(path) {
-  if (path.endsWith('.css')) return 'text/css';
-  if (path.endsWith('.js')) return 'text/javascript';
-  if (path.endsWith('.json')) return 'application/json';
-  if (path.endsWith('.png')) return 'image/png';
-  if (path.endsWith('.jpg') || path.endsWith('.jpeg')) return 'image/jpeg';
-  if (path.endsWith('.svg')) return 'image/svg+xml';
-  return 'text/plain';
-}
+app.get('/:lang/about', (req, res) => {
+  renderPage(req, res, 'about');
+});
 
-export default app;
+app.get('/:lang/prices', (req, res) => {
+  renderPage(req, res, 'prices');
+});
+
+app.get('/:lang/gallery', (req, res) => {
+  renderPage(req, res, 'gallery');
+});
+
+app.get('/:lang/contact', (req, res) => {
+  renderPage(req, res, 'contact');
+});
+
+export default {
+  fetch: app
+};
