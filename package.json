@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "node build-pages.js"
+    "build": "node build-cf.js",
+    "deploy": "npm run build && wrangler deploy"
   },
   "keywords": [],
   "author": "",
