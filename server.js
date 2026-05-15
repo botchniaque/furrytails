@@ -16,6 +16,14 @@ const translations = {
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  next();
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 const renderPage = (req, res, page) => {
@@ -23,7 +31,7 @@ const renderPage = (req, res, page) => {
   const t = translations[lang] || translations.en;
   const path = req.path.replace(/^\/(en|de)/, '');
   const otherLang = lang === 'en' ? 'de' : 'en';
-  const currentPath = path === '/' ? '' : path;
+  const currentPath = path === '/' ? '' : path.replace(/^\//, '');
   const template = lang === 'de' ? `${page}_de` : page;
   res.render(template, { lang, t, currentPath, otherLang });
 };
